@@ -100,7 +100,7 @@ int getBestMove(char board[SIZE][SIZE], char comp, char player) {
     // best available
     int bestC = -1, bestR = -1;
     for (int c = 0; c < SIZE; c++) {
-        int r = getLowestEmptyRow(board, c);
+        int r = rand()%8;
         if (r > bestR) {
             bestR = r;
             bestC = c;
