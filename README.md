@@ -1,26 +1,26 @@
----
+# Terminal Connect-5 🎮
 
-### 2. Terminal Connect-5 with Heuristic AI
-
-```markdown
-# Terminal Connect-5 with Heuristic AI 🎮
-
-A robust, terminal-based implementation of the classic Connect-5 game, built entirely in C. Played on an 8x8 grid, this project features complex 2D array manipulation, dynamic multi-directional win-checking algorithms, and a custom heuristic AI opponent. 
+A terminal-based Connect-5 game written entirely in C. Played on an 8x8 grid, this project features gravity-based piece dropping, dynamic multi-directional win checking, a basic heuristic AI opponent, and a persistent scoreboard.
 
 ## ✨ Features
-* **Custom Heuristic AI:** Play against the computer in Single Player mode. The AI is engineered to analyze the board state, proactively block the player's winning moves, and execute its own winning strategies.
-* **Multi-Directional Win Detection:** Efficient algorithmic checks for 5-in-a-row across horizontal, vertical, and both diagonal axes.
-* **Persistent Scoreboard:** Utilizes File I/O operations (`scores.txt`) to save, update, and sort player win records across different gaming sessions.
-* **Two-Player Local Mode:** Play against a friend on the same terminal.
+
+* **Single Player Mode (vs AI):** Play against a computer opponent. The AI evaluates the board state to proactively block your winning moves and secure its own wins when possible.
+* **Local Two-Player Mode:** Play against a friend on the same terminal.
+* **Persistent Scoreboard:** Uses File I/O (`scores.txt`) to save, track, and rank player wins across different gaming sessions.
+* **Dynamic Board:** 8x8 grid with a simulated "gravity" effect—pieces automatically fall to the lowest available row in the selected column.
+* **Multi-Directional Win Detection:** Efficiently checks for 5-in-a-row across horizontal, vertical, and both diagonal axes.
 
 ## 🛠️ Tech Stack
+
 * **Language:** C
-* **Core Concepts:** Data Structures, Algorithms, File I/O, 2D Arrays, Matrix Traversal
+* **Core Concepts:** 2D Arrays, File I/O, Matrix Traversal, Basic Heuristic Algorithms
 
-## 🚀 How to Play
+## 🚀 Getting Started
 
-### Compilation
-Ensure you have a C compiler (like `gcc`) installed on your system.
+### Prerequisites
+You need a C compiler (like `gcc`) installed on your system to run this game.
+
+### Installation & Compilation
 1. Clone the repository:
    ```bash
    git clone [https://github.com/Codered1729/Connect-5-Game.git](https://github.com/Codered1729/Connect-5-Game.git)
