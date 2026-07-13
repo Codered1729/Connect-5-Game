@@ -75,38 +75,50 @@ int makeMove(char board[SIZE][SIZE], char sym, int col) {
 
 // Simple AI: win if possible, block if needed, else pick tallest column.
 int getBestMove(char board[SIZE][SIZE], char comp, char player) {
-    // try win
+    // Try to win
     for (int c = 0; c < SIZE; c++) {
         int r = getLowestEmptyRow(board, c);
-        if (r<0) continue;
+        if (r < 0) continue;
+
         board[r][c] = comp;
+
         if (isWinningMove(board, r, c, comp)) {
             board[r][c] = EMPTY;
             return c;
         }
+
         board[r][c] = EMPTY;
     }
-    // block
+
+    // Try to block player
     for (int c = 0; c < SIZE; c++) {
         int r = getLowestEmptyRow(board, c);
-        if (r<0) continue;
+        if (r < 0) continue;
+
         board[r][c] = player;
+
         if (isWinningMove(board, r, c, player)) {
             board[r][c] = EMPTY;
             return c;
         }
+
         board[r][c] = EMPTY;
     }
-    // best available
-    int bestC = -1, bestR = -1;
+
+    // Random valid move
+    int validCols[SIZE];
+    int count = 0;
+
     for (int c = 0; c < SIZE; c++) {
-        int r = rand()%8;
-        if (r > bestR) {
-            bestR = r;
-            bestC = c;
+        if (getLowestEmptyRow(board, c) != -1) {
+            validCols[count++] = c;
         }
     }
-    return bestC;
+
+    if (count == 0)
+        return -1;
+
+    return validCols[rand() % count];
 }
 
 // ---------- Scoreboard Functions ----------
