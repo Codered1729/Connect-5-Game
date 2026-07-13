@@ -23,4 +23,4 @@ You need a C compiler (like `gcc`) installed on your system to run this game.
 ### Installation & Compilation
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/Codered1729/Connect-5-Game.git](https://github.com/Codered1729/Connect-5-Game.git)
+   git clone https://github.com/Codered1729/Connect-5-Game
